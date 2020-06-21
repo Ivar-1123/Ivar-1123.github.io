@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weight</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <!-- title bar of page -->
+    <div class="titleBar">
+      <!-- side panel button -->
+      <div class="sidePanelInterface">
+        <div class="sidePanelButton" id="openButton"></div>
+
+        <!-- side panel elements -->
+        <nav>
+          <ul>
+            <li><a href="#" id="closeButton">&blacktriangleleft;</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./length.html">Length</a></li>
+            <li><a href="./weight.html">Weight</a></li>
+            <li><a href="./volume.html">Volume</a></li>
+            <li><a href="./area.html">Area</a></li>
+            <li><a href="./speed.html">Speed</a></li>
+            <li><a href="./temp.html">Temperature</a></li>
+            <li><a href="./power.html">Power</a></li>
+            <li><a href="./energy.html">Energy</a></li>
+            <li><a href="./pressure.html">Pressure</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- title -->
+      <div>
+        <header>
+          <h1>Weight</h1>
+        </header>
+      </div>
+    </div>
+
+    <!-- converter content -->
+    <div class="container">
+      <!-- input panel -->
+      <div class="panel input panel1">
+        <!-- unit selector -->
+        <div class="panelUnit units">
+          <div class="cell">
+            <select name="u1" id="inputUnit" tabindex="1">
+              <option value="gram">gram</option>
+              <option value="kilogram">kilogram</option>
+              <option value="pound">pound</option>
+              <option value="ounce">ounce</option>
+              <option value="carat">carat</option>
+              <option value="short ton">short ton (us)</option>
+              <option value="long ton">long ton (uk)</option>
+              <option value="metric ton">metric ton</option>
+              <option value="grain">grain</option>
+            </select>
+          </div>
+          <div class="cell">
+            <select name="u2" id="outputUnit" tabindex="2">
+              <option value="gram">gram</option>
+              <option value="kilogram">kilogram</option>
+              <option value="pound">pound</option>
+              <option value="ounce">ounce</option>
+              <option value="carat">carat</option>
+              <option value="shortton">short ton (us)</option>
+              <option value="longton">long ton (uk)</option>
+              <option value="metricton">metric ton</option>
+              <option value="grain">grain</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- number input -->
+        <div class="panelUnit">
+          <div class="cell inputCell">
+            <input type="text" name="" id="input" tabindex="3" />
+          </div>
+        </div>
+      </div>
+
+      <!-- convert button panel -->
+      <div class="panel panel2">
+        <div class="cell panelUnit">
+          <input type="button" value="CONVERT" tabindex="4" id="convert" />
+        </div>
+      </div>
+
+      <!-- output panel -->
+      <div class="panel panel3">
+        <div class="panelUnit">
+          <div class="cell">
+            <p id="result">
+              <span>Result</span>
+            </p>
+          </div>
+          <div class="cell">
+            <p id="facts">
+              Thats about..
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="snackbar">
+      Enter number
+    </div>
+
+    <script src="./js/weight.js"></script>
+  </body>
+</html>

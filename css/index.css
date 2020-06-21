@@ -1,0 +1,337 @@
+@font-face {
+  font-family: "Roboto Mono Light";
+  src: url("./RobotoMono-Light.ttf");
+}
+
+:root {
+  --highlightColor: rgb(230, 226, 226);
+  font-size: 16px;
+}
+
+html * {
+  font-family: "Roboto Mono Light", monospace;
+  box-sizing: border-box;
+}
+
+/*********************
+* Flex Properties    *
+*********************/
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  align-items: center;
+  margin: 3rem auto 0 auto;
+}
+
+.titleBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*********************
+* Index Page         *
+*********************/
+
+.index {
+  border-radius: 5px;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 1.5em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.index a img {
+  /* min-width: 120px; */
+  max-width: 90%;
+}
+
+.index a {
+  text-decoration: none;
+  width: 8em;
+  height: 8em;
+  margin: 0.5em;
+  padding: 0.3em 0.2em;
+  border: 1px black solid;
+  border-radius: 5px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.index a:active {
+  background: rgb(221, 213, 213);
+}
+.index a:hover {
+  background-color: var(--highlightColor);
+}
+
+/*********************
+* Misc               *
+*********************/
+
+/* select font size does not seem to change when changing root font size */
+select {
+  font-size: 1rem;
+}
+
+h1 {
+  font-size: 1.3rem;
+}
+
+#input {
+  text-align: right;
+  padding-right: 0.4em;
+  font-size: 2rem;
+  height: 100%;
+}
+
+input[type="button"] {
+  font-size: 1em;
+}
+
+/* to align both the select elements properly */
+.units > .cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1px;
+}
+
+input[type="button"]:active {
+  background: rgb(221, 213, 213);
+}
+
+.inputCell {
+  height: 100%;
+}
+
+#result {
+  text-align: right;
+  font-size: 2rem;
+  word-wrap: break-word;
+  /* incase of even smaller devices */
+}
+
+/* contains placeholder text "result" */
+span {
+  color: #d3d3d3;
+  margin: 0;
+}
+
+#result,
+#facts {
+  padding: 0.5em;
+}
+
+/*********************
+* SNACKBAR           *
+*********************/
+
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  text-align: center;
+  border: 1px black solid;
+  background-color: var(--highlightColor);
+  border-radius: 5px;
+  padding: 5px 10px;
+  position: fixed; /* Sit on top of the screen */
+  left: 50%;
+  bottom: 100px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2 seconds */
+  animation: fadein 0.5s, fadeout 0.5s 2s;
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 100px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 100px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+/*********************
+* Title bar          *
+*********************/
+
+h1 {
+  margin: 0.3em 1rem 0.3em 0;
+}
+
+/* panel button */
+.sidePanelInterface {
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 1.7rem;
+  width: 2.2rem;
+}
+
+/* contains button and nav panel */
+.sidePanelButton {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  /* so that the button shifts when menu pops out */
+  background: rgb(255, 255, 255);
+  background-image: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0, 1) 20%,
+    rgb(221, 213, 213) 20%,
+    rgb(221, 213, 213) 40%,
+    rgb(0, 0, 0, 1) 40%,
+    rgb(0, 0, 0, 1) 60%,
+    rgb(221, 213, 213) 60%,
+    rgb(221, 213, 213) 80%,
+    rgb(0, 0, 0, 1) 80%,
+    rgb(0, 0, 0, 1) 50%
+  );
+}
+
+.titleBar {
+  margin: 10px auto;
+  width: 95%;
+  border: 1px black solid;
+  border-radius: 5px;
+  background: var(--highlightColor);
+  padding: 5px 10px;
+}
+
+/*********************
+* Side Panel         *
+*********************/
+
+nav {
+  width: 9em;
+  border: 1px black solid;
+  border-radius: 5px;
+  background: var(--highlightColor);
+  padding: 0.01em 0.4em;
+  z-index: 100;
+  top: 0.5rem;
+  left: 0.5rem;
+  transform: translateX(-200%);
+  position: absolute;
+}
+
+nav.nav-open {
+  width: 9em;
+  border: 1px black solid;
+  border-radius: 5px;
+  background: var(--highlightColor);
+  padding: 0.01em 0.4em;
+  z-index: 100;
+  top: 0.5rem;
+  left: 0.5rem;
+  position: absolute;
+  transform: translateX(0);
+}
+
+nav ul {
+  padding: 0;
+}
+
+nav li {
+  list-style: none;
+  margin-top: 0.5em;
+}
+
+nav a {
+  font-size: 0.7rem;
+  text-decoration: none;
+  padding: 0.3em 0.2em;
+  background: white;
+  border: 1px black solid;
+  border-radius: 5px;
+  width: 100%;
+  display: block;
+  color: black;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+nav a:active {
+  background: rgb(221, 213, 213);
+}
+nav a:hover {
+  background-color: var(--highlightColor);
+}
+
+/*********************
+* CELLs              *
+*********************/
+
+.cell {
+  border: 1px black solid;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.cell * {
+  width: 100%;
+  border: 0;
+  display: block;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0;
+}
+
+.cell input[type="button"] {
+  min-height: 2rem;
+}
+
+/*********************
+* PANELs             *
+*********************/
+
+.panel {
+  padding: 0;
+  margin-bottom: 1.2rem;
+  width: 100%;
+  display: flex;
+}
+
+.panel .panelUnit {
+  margin: 4px;
+}
+
+.panel > div {
+  width: 100%;
+}
+
+.panelUnit .cell {
+  width: 100%;
+}
+
+/* for input panel */
+.input {
+  flex-direction: row;
+}
