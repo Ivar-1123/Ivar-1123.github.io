@@ -1,109 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Energy</title>
-    <link rel="stylesheet" href="./css/index.css" />
-  </head>
 
-  <body>
-    <!-- title bar of page -->
-    <div class="titleBar">
-      <!-- side panel button -->
-      <div class="sidePanelInterface">
-        <div class="sidePanelButton" id="openButton"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energy</title>
+  <link rel="stylesheet" href="./css/index.css" />
+  <link rel="shortcut icon" href="./res/icon.png" type="image/x-icon">
+</head>
 
-        <!-- side panel elements -->
-        <nav>
-          <ul>
-            <li><a href="#" id="closeButton">&blacktriangleleft;</a></li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./length.html">Length</a></li>
-            <li><a href="./weight.html">Weight</a></li>
-            <li><a href="./volume.html">Volume</a></li>
-            <li><a href="./area.html">Area</a></li>
-            <li><a href="./speed.html">Speed</a></li>
-            <li><a href="./temp.html">Temperature</a></li>
-            <li><a href="./power.html">Power</a></li>
-            <li><a href="./energy.html">Energy</a></li>
-            <li><a href="./pressure.html">Pressure</a></li>
-          </ul>
-        </nav>
-      </div>
+<body>
+  <!-- title bar of page -->
+  <div class="titleBar">
+    <!-- side panel button -->
+    <div class="sidePanelInterface">
+      <div class="sidePanelButton" id="openButton"></div>
 
-      <!-- title -->
-      <div>
-        <header>
-          <h1>Energy</h1>
-        </header>
-      </div>
+      <!-- side panel elements -->
+      <nav>
+        <ul>
+          <li><a href="#" id="closeButton">&blacktriangleleft;</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./length.html">Length</a></li>
+          <li><a href="./weight.html">Weight</a></li>
+          <li><a href="./volume.html">Volume</a></li>
+          <li><a href="./area.html">Area</a></li>
+          <li><a href="./speed.html">Speed</a></li>
+          <li><a href="./temp.html">Temperature</a></li>
+          <li><a href="./power.html">Power</a></li>
+          <li><a href="./energy.html">Energy</a></li>
+          <li><a href="./pressure.html">Pressure</a></li>
+        </ul>
+      </nav>
     </div>
 
-    <!-- converter content -->
-    <div class="container">
-      <!-- input panel -->
-      <div class="panel input panel1">
-        <!-- unit selector -->
-        <div class="panelUnit units">
-          <div class="cell">
-            <select name="u1" id="inputUnit" tabindex="1">
-              <option value="electron volts">electron volts</option>
-              <option value="joules">joules</option>
-              <option value="kilojoules">kilojoules</option>
-              <option value="thermal calories">thermal calories</option>
-              <option value="food calories">food calories</option>
-              <option value="foot pounds">foot pounds</option>
-            </select>
-          </div>
-          <div class="cell">
-            <select name="u2" id="outputUnit" tabindex="2">
-              <option value="electron volts">electron volts</option>
-              <option value="joules">joules</option>
-              <option value="kilojoules">kilojoules</option>
-              <option value="thermal calories">thermal calories</option>
-              <option value="food calories">food calories</option>
-              <option value="foot pounds">foot pounds</option>
-            </select>
-          </div>
-        </div>
+    <!-- title -->
+    <div>
+      <header>
+        <h1>Energy</h1>
+      </header>
+    </div>
+  </div>
 
-        <!-- number input -->
-        <div class="panelUnit">
-          <div class="cell inputCell">
-            <input type="text" name="" id="input" tabindex="3" />
-          </div>
+  <!-- converter content -->
+  <div class="container">
+    <!-- input panel -->
+    <div class="panel input panel1">
+      <!-- unit selector -->
+      <div class="panelUnit units">
+        <div class="cell">
+          <select name="u1" id="inputUnit" tabindex="1">
+            <option value="electron volts">electron volts</option>
+            <option value="joules">joules</option>
+            <option value="kilojoules">kilojoules</option>
+            <option value="thermal calories">thermal calories</option>
+            <option value="food calories">food calories</option>
+            <option value="foot pounds">foot pounds</option>
+          </select>
         </div>
-      </div>
-
-      <!-- convert button panel -->
-      <div class="panel panel2">
-        <div class="cell panelUnit">
-          <input type="button" value="CONVERT" tabindex="4" id="convert" />
+        <div class="cell">
+          <select name="u2" id="outputUnit" tabindex="2">
+            <option value="electron volts">electron volts</option>
+            <option value="joules">joules</option>
+            <option value="kilojoules">kilojoules</option>
+            <option value="thermal calories">thermal calories</option>
+            <option value="food calories">food calories</option>
+            <option value="foot pounds">foot pounds</option>
+          </select>
         </div>
       </div>
 
-      <!-- output panel -->
-      <div class="panel panel3">
-        <div class="panelUnit">
-          <div class="cell">
-            <p id="result">
-              <span>Result</span>
-            </p>
-          </div>
-          <div class="cell">
-            <p id="facts">
-              Thats about..
-            </p>
-          </div>
+      <!-- number input -->
+      <div class="panelUnit">
+        <div class="cell inputCell">
+          <input type="text" name="" id="input" tabindex="3" />
         </div>
       </div>
     </div>
 
-    <div id="snackbar">
-      Enter number
+    <!-- convert button panel -->
+    <div class="panel panel2">
+      <div class="cell panelUnit">
+        <input type="button" value="CONVERT" tabindex="4" id="convert" />
+      </div>
     </div>
 
-    <script src="./js/energy.js"></script>
-  </body>
+    <!-- output panel -->
+    <div class="panel panel3">
+      <div class="panelUnit">
+        <div class="cell">
+          <p id="result">
+            <span>Result</span>
+          </p>
+        </div>
+        <div class="cell">
+          <p id="facts">
+            Thats about..
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="snackbar">
+    Enter number
+  </div>
+
+  <script src="./js/energy.js"></script>
+</body>
+
 </html>

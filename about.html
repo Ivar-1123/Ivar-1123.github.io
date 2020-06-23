@@ -1,76 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/index.css" />
-    <title>About</title>
-  </head>
 
-  <body>
-    <!-- title bar of page -->
-    <div class="titleBar">
-      <!-- side panel button -->
-      <div class="sidePanelInterface">
-        <div class="sidePanelButton" id="openButton"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/index.css" />
+  <title>About</title>
+  <link rel="shortcut icon" href="./res/icon.png" type="image/x-icon">
+</head>
 
-        <!-- side panel elements -->
-        <nav>
-          <ul>
-            <li><a href="#" id="closeButton">&blacktriangleleft;</a></li>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./length.html">Length</a></li>
-            <li><a href="./weight.html">Weight</a></li>
-            <li><a href="./volume.html">Volume</a></li>
-            <li><a href="./area.html">Area</a></li>
-            <li><a href="./speed.html">Speed</a></li>
-            <li><a href="./temp.html">Temperature</a></li>
-            <li><a href="./power.html">Power</a></li>
-            <li><a href="./energy.html">Energy</a></li>
-            <li><a href="./pressure.html">Pressure</a></li>
-          </ul>
-        </nav>
-      </div>
+<body>
+  <!-- title bar of page -->
+  <div class="titleBar">
+    <!-- side panel button -->
+    <div class="sidePanelInterface">
+      <div class="sidePanelButton" id="openButton"></div>
 
-      <!-- title -->
-      <div>
-        <header>
-          <h1>About</h1>
-        </header>
-      </div>
+      <!-- side panel elements -->
+      <nav>
+        <ul>
+          <li><a href="#" id="closeButton">&blacktriangleleft;</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./length.html">Length</a></li>
+          <li><a href="./weight.html">Weight</a></li>
+          <li><a href="./volume.html">Volume</a></li>
+          <li><a href="./area.html">Area</a></li>
+          <li><a href="./speed.html">Speed</a></li>
+          <li><a href="./temp.html">Temperature</a></li>
+          <li><a href="./power.html">Power</a></li>
+          <li><a href="./energy.html">Energy</a></li>
+          <li><a href="./pressure.html">Pressure</a></li>
+        </ul>
+      </nav>
     </div>
 
-    <div class="container">
-      <form action="">
-        <div class="cell">
-          <p>Author: Ravi</p>
-        </div>
-
-        <div class="cell">
-          <label for="rating">
-            Rating
-          </label>
-          <select name="rating" id="rate" class="input_field">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-        </div>
-
-        <div class="cell">
-          <textarea
-            name="feedback"
-            id=""
-            cols="30"
-            rows="5"
-            placeholder="Review"
-          ></textarea>
-        </div>
-      </form>
+    <!-- title -->
+    <div>
+      <header>
+        <h1>About</h1>
+      </header>
     </div>
+  </div>
 
-    <script src="./js/about.js"></script>
-  </body>
+  <div class="container">
+    <form action="">
+      <div class="cell">
+        <p>Author: Ravi</p>
+      </div>
+
+      <div class="cell">
+        <label for="rating">
+          Rating
+        </label>
+        <select name="rating" id="rate" class="input_field">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <div class="cell">
+        <textarea name="feedback" id="" cols="30" rows="5" placeholder="Review"></textarea>
+      </div>
+    </form>
+  </div>
+
+  <script src="./js/about.js"></script>
+</body>
+
 </html>

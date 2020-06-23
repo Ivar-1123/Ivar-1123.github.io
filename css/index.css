@@ -48,7 +48,8 @@ html * {
 
 .index a img {
   /* min-width: 120px; */
-  max-width: 90%;
+  width: 4em;
+  height: 4em;
 }
 
 .index a {
@@ -229,7 +230,7 @@ h1 {
 *********************/
 
 nav {
-  width: 9em;
+  width: 10em;
   border: 1px black solid;
   border-radius: 5px;
   background: var(--highlightColor);
@@ -264,7 +265,7 @@ nav li {
 }
 
 nav a {
-  font-size: 0.7rem;
+  font-size: 1rem;
   text-decoration: none;
   padding: 0.3em 0.2em;
   background: white;

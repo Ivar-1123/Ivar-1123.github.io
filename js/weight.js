@@ -35,7 +35,7 @@ function getFactor(unit1, unit2) {
     pound: 2,
     ounce: 3,
     carat: 4,
-    "short on": 5,
+    "short ton": 5,
     "long ton": 6,
     "metric ton": 7,
     grain: 8,
